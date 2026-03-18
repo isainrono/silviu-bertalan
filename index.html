@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Silviu Bertalan — Luxury Retail Consultant & Team Leader. Expert in client relations, team leadership and luxury brand experience. Based in Barcelona." />
+  <title>Silviu Bertalan — Luxury Retail Consultant</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+
+        <!-- LEFT: Logo -->
+        <a href="#hero" class="nav__logo">
+          S<span>.</span>Bertalan
+        </a>
+
+        <!-- CENTER: Nav links -->
+        <ul class="nav__links" role="list">
+          <li><a href="#about"      class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#expertise"  class="nav__link" data-i18n="nav.expertise">Expertise</a></li>
+          <li><a href="#contact"    class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <!-- RIGHT: Socials + lang toggle + hamburger -->
+        <div class="nav__right">
+
+          <!-- Social icons -->
+          <div class="nav__socials">
+            <a href="https://www.linkedin.com/in/silviu-bertalan-48b54a9a/" target="_blank" rel="noopener noreferrer" class="nav__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/bert_alan_/" target="_blank" rel="noopener noreferrer" class="nav__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Vertical separator -->
+          <span class="nav__sep" aria-hidden="true"></span>
+
+          <!-- Language toggle -->
+          <div class="lang-toggle" aria-label="Language switcher">
+            <button class="lang-toggle__btn is-active" data-lang="en" aria-label="English">EN</button>
+            <span class="lang-toggle__sep">|</span>
+            <button class="lang-toggle__btn" data-lang="es" aria-label="Español">ES</button>
+          </div>
+
+          <!-- Mobile hamburger -->
+          <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="nav__mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="#about"      class="nav__link" data-i18n="nav.about">About</a></li>
+      <li><a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#expertise"  class="nav__link" data-i18n="nav.expertise">Expertise</a></li>
+      <li><a href="#contact"    class="nav__link" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-bottom">
+      <div class="nav__socials" style="display:flex;">
+        <a href="https://www.linkedin.com/in/silviu-bertalan-48b54a9a/" target="_blank" rel="noopener noreferrer" class="nav__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/bert_alan_/" target="_blank" rel="noopener noreferrer" class="nav__social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-toggle__btn is-active" data-lang="en">EN</button>
+        <span class="lang-toggle__sep">|</span>
+        <button class="lang-toggle__btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero__grid">
+
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-line"></span>
+              <span class="hero__eyebrow-text" data-i18n="hero.eyebrow">Luxury Retail Consultant</span>
+            </div>
+
+            <h1 class="hero__name">
+              Silviu<br><em>Bertalan</em>
+            </h1>
+
+            <p class="hero__title" data-i18n="hero.eyebrow">Luxury Retail Consultant</p>
+
+            <a href="#about" class="hero__cta">
+              <span data-i18n="hero.cta">Discover my story</span>
+              <span class="hero__cta-arrow">→</span>
+            </a>
+          </div>
+
+          <aside class="hero__aside" aria-label="Career highlights">
+            <div class="hero__stat">
+              <div class="hero__stat-number">15+</div>
+              <div class="hero__stat-label" data-i18n="hero.stat1" data-i18n-html="true">Years in<br>Luxury</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">7+</div>
+              <div class="hero__stat-label" data-i18n="hero.stat2" data-i18n-html="true">Luxury<br>Brands</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">2</div>
+              <div class="hero__stat-label" data-i18n="hero.stat3" data-i18n-html="true">Global<br>Cities</div>
+            </div>
+            <div class="hero__location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <span data-i18n="hero.location">Barcelona, Spain</span>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text" data-i18n="hero.scroll">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════ -->
+    <section id="about" class="about" aria-label="About">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__portrait-wrapper" data-animate>
+            <div class="about__portrait">
+              <img src="assets/portrait.png" alt="Silviu Bertalan" />
+            </div>
+            <div class="about__portrait-frame" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__content">
+            <span class="eyebrow" data-i18n="about.eyebrow">About</span>
+            <span class="gold-line" aria-hidden="true"></span>
+            <h2 class="section-heading" data-animate data-i18n="about.heading" data-i18n-html="true">
+              Crafting Excellence<br>in Every Interaction
+            </h2>
+
+            <p class="about__bio" data-animate data-delay="1" data-i18n="about.bio" data-i18n-html="true">
+              As a <strong>Team Leader at Loewe</strong>, I bring over 15 years of international
+              luxury retail experience — built across London and Barcelona, with houses including
+              <strong>Selfridges, Dries Van Noten, Mary Katrantzou and 24 Sèvres</strong>. I drive
+              team performance and create <strong>memorable client experiences</strong> that reflect
+              the heritage and excellence of the world's finest brands.
+            </p>
+
+            <p class="about__bio" data-animate data-delay="2" data-i18n="about.bio2" data-i18n-html="true">
+              I am committed to helping the team strive and reach their goals, maintaining a
+              <strong>healthy work environment</strong> and a strong relationship both with the team
+              and with the clients, to ensure positive and successful results are being achieved.
+            </p>
+
+            <div class="about__details" data-animate data-delay="3">
+              <div>
+                <span class="about__detail-label" data-i18n="about.detail1.label">Location</span>
+                <span class="about__detail-value" data-i18n="about.detail1.value">Barcelona, Catalonia, Spain</span>
+              </div>
+              <div>
+                <span class="about__detail-label" data-i18n="about.detail2.label">Languages</span>
+                <span class="about__detail-value" data-i18n="about.detail2.value">Spanish · English · Romanian</span>
+              </div>
+              <div>
+                <span class="about__detail-label" data-i18n="about.detail3.label">Sector</span>
+                <span class="about__detail-value" data-i18n="about.detail3.value">Luxury Retail</span>
+              </div>
+              <div>
+                <span class="about__detail-label" data-i18n="about.detail4.label">Availability</span>
+                <span class="about__detail-value" data-i18n="about.detail4.value">Open to opportunities</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         EXPERIENCE
+    ══════════════════════════════════════════ -->
+    <section id="experience" class="experience" aria-label="Experience">
+      <div class="container">
+
+        <div class="experience__header">
+          <span class="eyebrow" data-i18n="exp.eyebrow">Career</span>
+          <span class="gold-line" aria-hidden="true"></span>
+          <h2 class="section-heading" data-i18n="exp.heading" data-i18n-html="true">
+            Professional<br>Journey
+          </h2>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Item 1: Team Leader -->
+          <article class="timeline__item" data-animate>
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item1.date">Jan 2024 — Present</time>
+              <span class="timeline__badge" data-i18n="exp.item1.badge">Current</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item1.role">Team Leader</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item1.company">Loewe</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item1.location">Barcelona</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item1.desc">
+              Leading a high-performance sales team within one of the most prestigious luxury houses
+              in the world. Responsible for driving team performance, mentoring staff, and ensuring
+              every client interaction reflects the house's heritage of craftsmanship and excellence.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Team Leadership</span>
+              <span class="timeline__skill-tag">Client Relations</span>
+              <span class="timeline__skill-tag">Sales Strategy</span>
+              <span class="timeline__skill-tag">Luxury Retail</span>
+              <span class="timeline__skill-tag">POS Systems</span>
+              <span class="timeline__skill-tag">Visual Merchandising</span>
+            </div>
+          </article>
+
+          <!-- Item 2: Senior Sales Assistant -->
+          <article class="timeline__item" data-animate data-delay="1">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item2.date">Jul 2022 — Jan 2024</time>
+              <span class="timeline__badge" data-i18n="exp.item2.badge">1 yr 6 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item2.role">Senior Sales Assistant</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item2.company">Loewe</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item2.location">Barcelona</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item2.desc">
+              Delivered white-glove client experiences in alignment with Loewe's values of creativity
+              and craftsmanship. Developed deep product expertise across leather goods, ready-to-wear,
+              and accessories. Built a loyal client portfolio through personalised service.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Product Knowledge</span>
+              <span class="timeline__skill-tag">Client Portfolio</span>
+              <span class="timeline__skill-tag">Leather Goods</span>
+              <span class="timeline__skill-tag">Ready-to-Wear</span>
+              <span class="timeline__skill-tag">Accessories</span>
+            </div>
+          </article>
+
+          <!-- Item 3: Sales Assistant Etnia -->
+          <article class="timeline__item" data-animate data-delay="2">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item3.date">Dec 2020 — Jul 2022</time>
+              <span class="timeline__badge" data-i18n="exp.item3.badge">1 yr 8 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item3.role">Sales Assistant</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item3.company">Etnia Barcelona</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item3.location">Barcelona</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item3.desc">
+              Provided expert styling advice and product knowledge in a dynamic luxury eyewear
+              environment. Built strong client relationships and consistently surpassed individual
+              sales targets through a consultative and personalised approach.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Luxury Eyewear</span>
+              <span class="timeline__skill-tag">Style Consulting</span>
+              <span class="timeline__skill-tag">Client Relations</span>
+              <span class="timeline__skill-tag">Sales Targets</span>
+            </div>
+          </article>
+
+          <!-- Item 4: SMAK -->
+          <article class="timeline__item" data-animate data-delay="3">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item4.date">Aug 2019 — Oct 2020</time>
+              <span class="timeline__badge" data-i18n="exp.item4.badge">1 yr 2 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item4.role">Sales Assistant</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item4.company">SMAK</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item4.location">Barcelona</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item4.desc">
+              Delivered outstanding customer experiences in a premium retail environment in Barcelona,
+              applying the expertise and refined client approach developed throughout years in
+              international luxury. Consistently exceeded sales targets through personalised
+              product knowledge and service excellence.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Product Knowledge</span>
+              <span class="timeline__skill-tag">POS Systems</span>
+              <span class="timeline__skill-tag">Customer Experience</span>
+              <span class="timeline__skill-tag">Sales</span>
+            </div>
+          </article>
+
+          <!-- Item 5: Selfridges — Dries Van Noten -->
+          <article class="timeline__item" data-animate>
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item5.date">Feb 2017 — Sep 2019</time>
+              <span class="timeline__badge" data-i18n="exp.item5.badge">2 yrs 8 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item5.role">Brand Specialist — Dries Van Noten</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item5.company">Selfridges</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item5.location">London, UK</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item5.desc">
+              Acted as the dedicated in-store brand ambassador for Dries Van Noten within one of
+              London's most iconic luxury department stores. Developed deep expertise in the brand's
+              design philosophy and heritage, curating a bespoke clienteling experience for an
+              international, high-net-worth clientele.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Brand Ambassadorship</span>
+              <span class="timeline__skill-tag">Dries Van Noten</span>
+              <span class="timeline__skill-tag">VIP Clienteling</span>
+              <span class="timeline__skill-tag">Product Knowledge</span>
+              <span class="timeline__skill-tag">POS Systems</span>
+            </div>
+          </article>
+
+          <!-- Item 6: Selfridges — Mary Katrantzou -->
+          <article class="timeline__item" data-animate data-delay="1">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item6.date">Feb 2015 — Nov 2017</time>
+              <span class="timeline__badge" data-i18n="exp.item6.badge">2 yrs 9 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item6.role">Brand Specialist — Mary Katrantzou</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item6.company">Selfridges</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item6.location">London, UK</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item6.desc">
+              Represented the Mary Katrantzou brand at Selfridges' 400 Oxford Street flagship,
+              providing an elevated and personalised shopping experience. Responsible for brand
+              storytelling, building client relationships and driving sales for one of fashion's
+              most distinctive and creative voices.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Brand Specialist</span>
+              <span class="timeline__skill-tag">Mary Katrantzou</span>
+              <span class="timeline__skill-tag">Oxford Street</span>
+              <span class="timeline__skill-tag">Fashion RTW</span>
+              <span class="timeline__skill-tag">Client Relations</span>
+            </div>
+          </article>
+
+          <!-- Item 7: Selfridges — Women Designer -->
+          <article class="timeline__item" data-animate data-delay="2">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item7.date">Feb 2014 — Jan 2015</time>
+              <span class="timeline__badge" data-i18n="exp.item7.badge">1 yr</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item7.role">Sales Assistant — Women's Designer</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item7.company">Selfridges</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item7.location">London, UK</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item7.desc">
+              Worked within the prestigious Women's Designer galleries at Selfridges, assisting
+              an international clientele across multiple luxury ready-to-wear brands. Developed
+              a strong foundation in multi-brand luxury retail, styling, and high-end customer service.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Women's Designer</span>
+              <span class="timeline__skill-tag">Multi-brand Retail</span>
+              <span class="timeline__skill-tag">Styling</span>
+              <span class="timeline__skill-tag">POS Systems</span>
+            </div>
+          </article>
+
+          <!-- Item 8: Qloe at Selfridges -->
+          <article class="timeline__item" data-animate data-delay="3">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item8.date">Dec 2013 — Feb 2014</time>
+              <span class="timeline__badge" data-i18n="exp.item8.badge">3 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item8.role">Brand Assistant — Qloe</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item8.company">Qloe at Selfridges</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item8.location">London, UK</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item8.desc">
+              Represented the Qloe brand concession within Selfridges, delivering a refined brand
+              experience to a fashion-forward clientele. Gained first-hand exposure to the unique
+              dynamics of operating a designer brand within a world-class luxury department store.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Brand Concession</span>
+              <span class="timeline__skill-tag">Luxury Department Store</span>
+              <span class="timeline__skill-tag">Product Knowledge</span>
+              <span class="timeline__skill-tag">POS Systems</span>
+            </div>
+          </article>
+
+          <!-- Item 9: 24 Sèvres -->
+          <article class="timeline__item" data-animate>
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__meta">
+              <time class="timeline__date" data-i18n="exp.item9.date">Nov 2010 — Dec 2011</time>
+              <span class="timeline__badge" data-i18n="exp.item9.badge">1 yr 2 mo</span>
+            </div>
+            <h3 class="timeline__role" data-i18n="exp.item9.role">Sales Assistant</h3>
+            <p class="timeline__company">
+              <span data-i18n="exp.item9.company">24 Sèvres</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="exp.item9.location">London, UK</span>
+            </p>
+            <p class="timeline__description" data-i18n="exp.item9.desc">
+              Began a distinguished international luxury retail career at 24 Sèvres in London,
+              developing a solid foundation in luxury clienteling, product expertise, and the
+              exceptional service standards that define the world's leading fashion houses. This
+              foundational experience shaped a career-long commitment to excellence.
+            </p>
+            <div class="timeline__skills" aria-label="Skills">
+              <span class="timeline__skill-tag">Luxury Retail</span>
+              <span class="timeline__skill-tag">Client Service</span>
+              <span class="timeline__skill-tag">Service Standards</span>
+              <span class="timeline__skill-tag">Product Knowledge</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         EXPERTISE
+    ══════════════════════════════════════════ -->
+    <section id="expertise" class="expertise" aria-label="Areas of expertise">
+      <div class="container">
+        <span class="eyebrow" data-i18n="exp2.eyebrow">Expertise</span>
+        <span class="gold-line" aria-hidden="true"></span>
+        <h2 class="section-heading" data-animate data-i18n="exp2.heading" data-i18n-html="true">
+          Areas of<br>Specialisation
+        </h2>
+
+        <div class="expertise__grid">
+
+          <div class="expertise__card" data-animate>
+            <div class="expertise__icon" aria-hidden="true">◈</div>
+            <h3 class="expertise__card-title" data-i18n="card1.title">Client Relations</h3>
+            <p class="expertise__card-text" data-i18n="card1.text">
+              Building lasting relationships with high-net-worth clients through personalised
+              service and genuine engagement.
+            </p>
+            <ul class="expertise__card-list" aria-label="Key skills">
+              <li data-i18n="card1.li1">VIP Client Management</li>
+              <li data-i18n="card1.li2">Client Portfolio Development</li>
+              <li data-i18n="card1.li3">Relationship Building</li>
+            </ul>
+          </div>
+
+          <div class="expertise__card" data-animate data-delay="1">
+            <div class="expertise__icon" aria-hidden="true">◇</div>
+            <h3 class="expertise__card-title" data-i18n="card2.title">Team Leadership</h3>
+            <p class="expertise__card-text" data-i18n="card2.text">
+              Inspiring and developing high-performing retail teams to achieve exceptional results.
+            </p>
+            <ul class="expertise__card-list" aria-label="Key skills">
+              <li data-i18n="card2.li1">Performance Management</li>
+              <li data-i18n="card2.li2">Staff Training & Mentoring</li>
+              <li data-i18n="card2.li3">Operational Excellence</li>
+            </ul>
+          </div>
+
+          <div class="expertise__card" data-animate data-delay="2">
+            <div class="expertise__icon" aria-hidden="true">◉</div>
+            <h3 class="expertise__card-title" data-i18n="card3.title">Luxury Product</h3>
+            <p class="expertise__card-text" data-i18n="card3.text">
+              Deep expertise across luxury categories with a refined aesthetic sensibility
+              and brand knowledge.
+            </p>
+            <ul class="expertise__card-list" aria-label="Key skills">
+              <li data-i18n="card3.li1">Leather Goods & RTW</li>
+              <li data-i18n="card3.li2">Luxury Eyewear</li>
+              <li data-i18n="card3.li3">Brand Heritage & Storytelling</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         BRANDS
+    ══════════════════════════════════════════ -->
+    <section class="brands" aria-label="Brand experience">
+      <div class="container">
+        <p class="brands__label" data-i18n="brands.label">Experience with world-class luxury houses</p>
+        <ul class="brands__list" role="list">
+          <li class="brands__item" data-animate>Loewe</li>
+          <li class="brands__item" data-animate data-delay="1">Selfridges</li>
+          <li class="brands__item" data-animate data-delay="2">Dries Van Noten</li>
+          <li class="brands__item" data-animate data-delay="3">Mary Katrantzou</li>
+          <li class="brands__item" data-animate data-delay="4">Etnia Barcelona</li>
+          <li class="brands__item" data-animate data-delay="5">24 Sèvres</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════════ -->
+    <section id="contact" class="contact" aria-label="Contact">
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="contact__left" data-animate>
+            <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+            <span class="gold-line" aria-hidden="true"></span>
+            <h2 class="contact__tagline" data-i18n="contact.tagline" data-i18n-html="true">
+              Let's create<br>something<br><em>extraordinary</em>
+            </h2>
+
+            <ul class="contact__info-list" aria-label="Contact information">
+              <li class="contact__info-item">
+                <span class="contact__info-icon" aria-hidden="true">📍</span>
+                <span class="contact__info-label">Location</span>
+                <span class="contact__info-value" data-i18n="contact.info.loc">Barcelona, Spain</span>
+              </li>
+              <li class="contact__info-item">
+                <span class="contact__info-icon" aria-hidden="true">✦</span>
+                <span class="contact__info-label">Status</span>
+                <span class="contact__info-value" data-i18n="contact.info.avail">Open to new opportunities</span>
+              </li>
+              <li class="contact__info-item">
+                <span class="contact__info-icon" aria-hidden="true">◈</span>
+                <span class="contact__info-label">Languages</span>
+                <span class="contact__info-value" data-i18n="contact.info.lang">ES · EN · RO</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact__right" data-animate data-delay="2">
+            <form class="contact__form" novalidate aria-label="Contact form">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="name" data-i18n="form.name">Full Name</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    data-i18n-placeholder="form.name"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email" data-i18n="form.email">Email Address</label>
+                  <input
+                    id="email"
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    data-i18n-placeholder="form.email"
+                    placeholder="Email Address"
+                  />
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="subject" data-i18n="form.subject">Subject</label>
+                <input
+                  id="subject"
+                  class="form__input"
+                  type="text"
+                  name="subject"
+                  required
+                  data-i18n-placeholder="form.subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="message" data-i18n="form.message">Your Message</label>
+                <textarea
+                  id="message"
+                  class="form__textarea"
+                  name="message"
+                  rows="5"
+                  required
+                  data-i18n-placeholder="form.message"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="form__submit" data-i18n="form.submit">
+                Send Message →
+              </button>
+            </form>
+            <div class="form__success" role="alert" data-i18n="form.success">
+              Thank you. Your message has been sent.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">Silviu Bertalan</span>
+        <span class="footer__copy" data-i18n="footer.copy">© 2025 Silviu. All rights reserved.</span>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#about"      class="footer__link" data-i18n="nav.about">About</a>
+          <a href="#experience" class="footer__link" data-i18n="nav.experience">Experience</a>
+          <a href="#contact"    class="footer__link" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
